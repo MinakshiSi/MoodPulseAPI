@@ -16,6 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DTOs", "DTOs", "{3182085E-4
 		MoodEntryDto.cs = MoodEntryDto.cs
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoodPulse.Test", "MoodPulse.Test\MoodPulse.Test.csproj", "{710E0093-E637-41ED-815A-620412BEA1CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoodPulseFuncApp", "MoodPulseFuncApp\MoodPulseFuncApp.csproj", "{7E8E6AFB-047D-4D3E-B704-96303D601AB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +38,14 @@ Global
 		{167ADBF6-70F7-45AD-9E9E-ABA881B03A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{167ADBF6-70F7-45AD-9E9E-ABA881B03A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{167ADBF6-70F7-45AD-9E9E-ABA881B03A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{710E0093-E637-41ED-815A-620412BEA1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710E0093-E637-41ED-815A-620412BEA1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710E0093-E637-41ED-815A-620412BEA1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710E0093-E637-41ED-815A-620412BEA1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E8E6AFB-047D-4D3E-B704-96303D601AB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E8E6AFB-047D-4D3E-B704-96303D601AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E8E6AFB-047D-4D3E-B704-96303D601AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E8E6AFB-047D-4D3E-B704-96303D601AB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

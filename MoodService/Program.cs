@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Web;
 using MoodService.Data;
 using MoodService.Models;
 using MoodService.Services;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,11 +14,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IMoodService, MoodServiceHandler>();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<MoodDbContext>(options =>
     options.UseSqlServer(connectionString));
+
+//Add application Insights
+builder.Services.AddApplicationInsightsTelemetry();
+
+builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
+
 builder.Services.AddScoped<IMoodService, MoodServiceHandler>();
+
+
+
 
 var app = builder.Build();
 
