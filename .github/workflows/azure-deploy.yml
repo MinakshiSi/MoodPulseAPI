@@ -8,6 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: MoodPulseFuncApp  # 👈 This links the job to your GitHub environment
 
     steps:
     - name: Checkout code
