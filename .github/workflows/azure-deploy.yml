@@ -8,7 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment: MoodPulseFuncApp  # 👈 This links the job to your GitHub environment
+    environment: MoodPulseFuncApp  # 👈 Links to your GitHub environment
 
     steps:
     - name: Checkout code
@@ -22,7 +22,10 @@ jobs:
     - name: Build project
       run: dotnet build --configuration Release
 
-    - name: Publish Azure Function
+    - name: Publish Azure Function project
+      run: dotnet publish ./MoodPulseFuncApp/MoodPulseFuncApp.csproj --configuration Release --output ./MoodPulseFuncApp/bin/Release/net8.0/publish
+
+    - name: Deploy Azure Function
       uses: Azure/functions-action@v1
       with:
         app-name: moodpulsefuncapp
